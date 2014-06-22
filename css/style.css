@@ -11,7 +11,8 @@
 /* Basic */
 
 	body, #skel-layers-wrapper {
-		background: #f3f6fa;
+		background: #fff;
+
 	}
 
 	body.loading * {
@@ -48,7 +49,7 @@
 
 		a:hover {
 			border-bottom-color: transparent;
-			opacity: 0.8
+			opacity: 0.8;
 		}
 
 	strong, b {
@@ -66,7 +67,7 @@
 		color: inherit;
 		font-weight: 300;
 		line-height: 1.75em;
-		margin-bottom: 1em;
+		margin-bottom: 20px;
 		text-transform: uppercase;
 	}
 
@@ -116,6 +117,7 @@
 
 	header.major {
 		padding-bottom: 2em;
+		margin-bottom: -40px;
 	}
 
 
@@ -146,7 +148,7 @@
 		}
 
 		header.special h2 {
-			margin-bottom: 0;
+			margin-bottom: 20px;
 		}
 
 		header.special h2 + p {
@@ -371,6 +373,7 @@
 			.icon.feature:before {
 				font-size: 5em;
 				line-height: 1em;
+				background-image: url("images/saltnpepa.png");
 			}
 
 		.icon > .label {
@@ -509,6 +512,7 @@
 		.button:hover {
 			background: rgba(188, 202, 206, 0.15);
 			border-color: inherit;
+			opacity: 0.7;
 		}
 
 		.button.special {
@@ -532,21 +536,25 @@
 			padding: 0.5em 0;
 		}
 
-		#tealbutton{
-			background: white;
+		.tealbutton{
+			background: transparent;
 			border-color: #83d3c9;
 			color: #83d3c9;
+			max-width: 14em;
+			z-index: 100;
 		}
 
 /* Wrapper */
 
 	.wrapper {
-		margin-bottom: 5em;
 		padding: 5em;
+		margin-bottom: 0px;
 	}
 
 		.wrapper.style1 {
 			padding: 0;
+			background-color: white;
+			margin-top: -40px;
 		}
 
 		.wrapper.style2 {
@@ -574,14 +582,16 @@
 				}
 
 		.wrapper.style3 {
-			background: white;
+			background: #f2f3f4;
 			color: inherit;
+			margin-top: -75px;
 		}
 
 		.wrapper.style4 {
 			background: white;
 			color: inherit;
 			padding: 4em;
+
 		}
 
 /* Header */
@@ -598,7 +608,6 @@
 		cursor: default;
 		font-size: 0.8em;
 		left: 0;
-		padding: 1em 1.5em;
 		position: fixed;
 		top: 0;
 		width: 100%;
@@ -624,7 +633,7 @@
 			position: absolute;
 			right: 1.5em;
 			text-transform: uppercase;
-			top: 0.75em;
+			top: 1em;
 		}
 
 			#header nav ul li {
@@ -693,16 +702,17 @@
 #logo_container{
 	height: 55px;
 	width: 213px;
-
+	padding: 10px 10px 10px 30px;
 }
 
 #logo_text{
 	position:absolute;
-	top: 15px;
-	margin-left: 75px;
+	top: 1.3em;
+	margin-left: 70px;
 	/* left: 115px; */
 	/* float: left; */
 	color: black;
+	letter-spacing: 0.075em;
 }
 
 		#header.alt {
@@ -711,12 +721,14 @@
 			-o-animation: none;
 			-ms-animation: none;
 			animation: none;
-			background: transparent;
+			background: white;
 			box-shadow: none;
 			color: #7c8081;
-			padding: 2em 2.5em;
+			/* padding: 2em 2.5em; */
 			position: absolute;
-		}
+		
+			z-index: 50;
+}
 
 			#header.alt nav {
 				right: 2.5em;
@@ -788,16 +800,37 @@
 
 	#banner {
 		background-attachment: scroll, scroll, scroll, fixed;
-		background-color: white;
-		background-image: url("images/light-bl.svg"), url("images/light-br.svg");
+		background-image: url("images/_MG_1054.jpg"), url("images/light-bl.svg"), url("images/light-br.svg");
 		background-position: bottom left, bottom right, top left, top center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 		background-size: 25em, 25em, auto, cover;
 		color: white;
 		cursor: default;
-		padding: 6em 0;
+		/* padding: 480px 300px; */
 		text-align: center;
-	}
+	
+		height: 600px;
+		width: 960px;
+}
+	
+	#banner #background_container{
+		width: 960px;
+		height: 600px;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		margin-right: auto;
+		margin-left: auto;
+		z-index: 1;
+		background-image: url("images/trianglepattern.png");
+		background-size: 960px 700px;
+		background-position: bottom left;
+		display: block;
+		opacity: 0.3;
+		filter: alpha(opacity=30); /* For IE8 and earlier */
+		z-index: 1;
+}
 
 		#banner .inner {
 			-moz-animation: reveal-banner 1s 0.25s ease-in-out;
@@ -810,14 +843,23 @@
 			-o-animation-fill-mode: forwards;
 			-ms-animation-fill-mode: forwards;
 			animation-fill-mode: forwards;
-			background: white;
+
 			color: #7c8081;
-			display: inline-block;
+			display: block;
 			opacity: 0;
 			padding: 3em;
 			text-align: center;
 			border: 1px #7c8081;
-		}
+			position: absolute;
+			left: 0;
+			right: 0;
+			z-index: 5;
+			margin-right: auto;
+			margin-left: auto;
+		
+			margin-top: 119.5px;
+}
+
 
 			#banner .inner header {
 				display: inline-block;
@@ -839,8 +881,6 @@
 			#banner .inner p {
 				letter-spacing: 0.1em;
 				margin: 0;
-
-			
 				font-weight: 100;
 }
 
@@ -856,14 +896,17 @@
 				margin: 2em 0 0 0;
 			}
 
+
+
 /* Main */
 
 	#main {
-		background-image: url("images/dark-tl.svg"), url("images/dark-tr.svg"), url("images/dark-bl.svg"), url("images/dark-br.svg");
 		background-position: top left, top right, bottom left, bottom right;
 		background-repeat: no-repeat;
 		background-size: 25em;
-		padding: 7em 0;
+		/* padding: 7em 0 0 0; */
+		position:relative;
+		z-index: 1000;
 	}
 
 		#main > :last-child {
@@ -882,7 +925,7 @@
 				margin-top: 0;
 			}
 			#main .row h3{
-				margin-bottom: 0
+				margin-bottom: 20px;
 			}
 
 	body.index #main {
@@ -893,19 +936,22 @@
 
 	#cta {
 		background-attachment: scroll, scroll, scroll, fixed;
-		background-color: #645862;
-		background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("images/overlay.png"), url("../images/banner.jpg");
+		background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("images/trianglepatterncta.png");
 		background-position: top left, top right, top left, bottom center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 		background-size: 25em, 25em, auto, cover;
-		color: white;
+		color: #7c8081;
 		padding: 5em;
 		text-align: center;
-	}
+		position: relative;
+		z-index: 1000;
+		background-color: white;
+}
 
 		#cta header {
 			margin-bottom: 2em;
 		}
+
 
 /* Footer */
 
@@ -914,6 +960,9 @@
 		color: #7c8081;
 		padding: 5em 5em 10em 5em;
 		text-align: center;
+		position: relative;
+		bottom:0;
+		z-index:500;
 	}
 
 		#footer .copyright {
@@ -1079,7 +1128,9 @@
 
 	.project{
 		padding: 25px;
+		background-color: white;
 		border: 1px solid #7c8081;
+		margin-top: 40px;
 	}
 
 .6u{
@@ -1092,4 +1143,34 @@
 
 .bannertext{
 	color: black;
+}
+
+#thirdrow{
+	text-align: center;
+}
+
+#intro{
+	padding-left: 75px;
+	padding-right: 75px;
+	margin-top: -40px;
+}
+
+#headericon{
+	margin-left: 20px;
+}
+
+.iconcolumn{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25%;
+}
+
+#introcontainer{
+	background-color: white;
+	padding-top: 40px;
+}
+
+.description{
+	margin-bottom: 25%;
 }
