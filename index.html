@@ -7,7 +7,8 @@
 <html>
 	<head>
 		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-		<title>Twenty by HTML5 UP</title>
+		<title>Lauren Tang Design</title>
+		<link rel="shortcut icon" href="images/favicon.ico">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -33,7 +34,13 @@
 		    <script type="text/javascript">
     	$(document).ready(function () {
         $('.bxslider').bxSlider();
-    });
+    });    	
+</script>
+<script type="text/javascript">
+function overlay(){
+	el=getElementbyId("overlay");
+	el.style.visibility=(el.style.visibility=="visible")? "hidden":"visible";
+}
 </script>
 
 
@@ -44,31 +51,14 @@
 			<header id="header" class="alt">
 				<h1 div id="logo">
 					<div id="logo_container">
-							<img src="images/laurentangicon.png" height="50px" width="50px">
+							<img src="images/laurentangicon.png" id="headericon" height="35px" width="35px">
 							<div id="logo_text">LAUREN TANG DESIGN</div>
 					<nav id="nav">
 					<ul>
-						<li class="submenu">
-							<a href="">Portfolio</a>
-							<ul>
-								<li><a href="left-sidebar.html">ALL</a></li>
-								<li><a href="right-sidebar.html">Graphic Design</a></li>
-								<li><a href="no-sidebar.html">UX/UI</a></li>
-								<li><a href="contact.html">Photography</a></li>
-								<li class="submenu">
-									<a href="">Submenu</a>
-									<ul>
-										<li><a href="#">Dolore Sed</a></li>
-										<li><a href="#">Consequat</a></li>
-										<li><a href="#">Lorem Magna</a></li>
-										<li><a href="#">Sed Magna</a></li>
-										<li><a href="#">Ipsum Nisl</a></li>
-									</ul>
-								</li>
-							</ul>
+						<li class="current"><a href="#main" class="button fit scrolly">Portfolio</a></li>
 						</li>
-						<li class="current"><a href="#main" class="button fit scrolly">About Me</a></li>
-						<li><a href="contact.html" class="button special">Contact</a></li>
+						<li class="current"><a href="#intro" class="button fit scrolly">About Me</a></li>
+						<li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=laurentang92@gmail.com&su=&body="_blank"" class="button special">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -77,6 +67,7 @@
 
 		<!-- Banner -->		
 			<section id="banner">
+				<div id="background_container"></div>
 				
 				<!--
 					".inner" is set up as an inline-block so it automatically expands
@@ -85,40 +76,33 @@
 					appropriate (<br />).
 				-->
 				<div class="inner">
-					
 					<header>
 						<h2><img src="images/laurentangicon.png"></h2>
 					</header>
 					<p class="bannertext"><strong>LAUREN TANG</strong></p>
 					<p class="bannertext">user-centered design</p>
-					<footer>
-						<ul class="buttons vertical">
-							<li><a href="#main" id= "tealbutton" class="button fit scrolly">Tell Me More</a></li>
-						</ul>
-					</footer>
-				
-				</div>
-				
+				<footer>
+					<ul class="buttons">
+						<li><a href="#main" class="button special">Tell Me More</a></li>
+					</ul>
+					</footer>					
+					</div>
+
 			</section>
 		
 		<!-- Main -->
 			<article id="main">
 
-				<header class="special container">
-					<span class="icon fa-bar-chart-o"></span>
-					<h2>Do you want to build a snowman?</br>Well I want to build your <strong>product</strong>.<br/>
-					</h2>
-					<p>Hi, my name is Lauren, and I am a designer based in the San Francisco Bay Area.  I am dedicated to designing stunning user interfaces that translate into engaging user experiences.  Call me old-fashioned, but I can create wondrous things with a pen and paper.  Now if you give me a computer (not literally, of course), I can also show you what I can do for web and mobile applications.  </p>
-				</header>
 
 				<section class="wrapper style3 container special">
 					
 						<header class="major">
+							<div class="icon fa-bar-chart-o"><img src="images/portfolioicon.png"></div>
 							<h2><strong>Portfolio</strong></h2>
 						</header>
 						
 						<div class="row">
-							<div id="6u">
+							<div class="6u">
 							
 								<section class="project">
 									<ul class="bxslider">
@@ -129,18 +113,29 @@
 					
 									<header>
 										<h3 class="subheader">Kollaboration</h3>
-										<p>web</p>
 									</header>
-									<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
+									<p>Designed a few facebook banners promoting multiple Kollaboration events.  With any assignment, I enjoy the opportunity to dabble with typography, spacing, and colors.  As a former pre-med student turned designer, I love working for an organization that believes in providing a stage for API performers in the arts.  </p>
 								</section>
 
+								<section class="project">
+									<a href='#' onclick='overlay()' class="image feature"> <img src="images/fsmposter.png" alt="" /></a>
+									<header>
+										<h3>50th Anniversary Poster</h3>
+									</header>
+									<p>Designed poster for the 50th Anniversary of the Free Speech Movement at Berkeley.  Inspired by vintage propaganda posters.</p>
+								</section>
+
+								<section class="project">
+									<a href="#"class="image feature"><img src="images/iconscolored.png" alt="" /></a>
+									<header>
+										<h3>Personal Projects</h3>
+									</header>
+									<p>Constantly establishing weekend projects allow me to stretch out those Photoshop and Illustrator muscles.  So in my free time, I make sure to do something creative, whether it is designing icons or making infographics. </p>
+								</section>
+
+
 							</div>
-							<script>
-							document.getElementbyId("6u").width="100%";
-							</script>
-						</div>
-						<div class= "row">
-							<div id="7u">
+							<div class="6u">
 							
 								<section class="project">
 									<ul class="bxslider">
@@ -151,119 +146,108 @@
 									</ul>
 									<header>
 										<h3>Freshness</h3>
-										<p>UI/UX</p>
 									</header>
-									<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
+									<p>Designed 5 webpages after finalizing efficient user flow.  Gained exposure to A/B testing, quick mockups, and web development.  It has been amazing working for Freshness, which combines my passion for convenience and beautiful pictures of food.  </p>
 								</section>
-
-							</div>
-							<script>
-							document.getElementbyId("7u").width="100%";
-							</script>
-						</div>
-						<div class="row">
-							<div class="6u">
-							
-								<section class="project">
-									<a href="#" class="image feature"><img src="images/fsmposter.png" alt="" /></a>
-									<header>
-										<h3>50th Anniversary Poster</h3>
-										<p>print<p>
-									</header>
-									<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-								</section>
-
-							</div>
-							<div class="6u">
-							
-								<section class="project">
-									<a href="#" class="image feature"><img src="images/iconscolored.png" alt="" /></a>
-									<header>
-										<h3>Personal Projects</h3>
-										<p>web</p>
-									</header>
-									<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-								</section>
-
+								
 								<section id= "box" class= "project">
 									<a href="#" class="image feature"><img src="images/calcallogo.png"/></a>
 									<header>
 										<h3>Calcal</h3>
 									</header>
-									<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit.</p>
+									<p>Designed logo for Calcal, a student app that streamlines coffee catchups with friends by syncing up calendars for Cal students.  Completed for Bear Hack 2013.  </p>
+								</section>	
 
-								</section>
-
+								<section class="project">
+									<ul class="bxslider">
+										<li class="image feature"><img src="images/brochure1.jpg"</li>
+										<li class="image feature"><img src="images/brochure2.jpg"></li>
+									</ul>
+									<header>
+										<h3>Fight The Flu Brochure</h3>
+									</header>
+									<p>Completed for child influenza awareness</p>
+								</section>								
 							</div>
+
+
+
 						</div>
+				</div>
+
 					
 					</section>
-					
+
+
+				
 				<!-- One -->
+<article id="intro">
+		<div id="introcontainer">	
+
+					<header class="special container">
+					<div class="icon fa-bar-chart-o"><img src="images/snowman.png"></div>
+					<h2>Do you want to build a snowman?</br>Well, I want to build your <strong>product</strong>.<br/>
+					</h2>
+					<p id="intro">Hi, my name is Lauren, and I am a designer based in the San Francisco Bay Area.  I am dedicated to designing stunning user interfaces that translate into engaging user experiences.  Call me old-fashioned, but I enjoy creating wondrous things with a pen and paper.  Now if you give me a computer (not literally, of course), I can also show you what I can do for web and mobile applications.  </p>
+				</header>
 
 					<section class="wrapper style2 container special-alt">
-						<div class="row half">
-							<div class="8u">
-							
-								<header>
+						<div class="row">
+							<div class="6u">
+								<header id="thirdrow">
+									<div class="icon fa-bar-chart-o"><img src="images/hearticon.png" id="heart"></div>
 									<h2>Do you <strong>love handles</strong>?</br>Well, so do I.</h2>
 								</header>
-								<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo.</p>
+								<p>I first picked up Adobe Creative Suite a few years ago, and there has been no stopping me since.  I am always working to improve my Photoshop and Illustrator game.  Expertise in both has made me into an overall more effective visual and UI designer.     </p>
 								<footer>
 									<ul class="buttons">
 										<li><a href="#" class="button">Find Out More</a></li>
 									</ul>
 								</footer>
-							
+
 							</div>
-							<div class="4u skel-cell-important">
-							
-								<ul class="feature-icons">
-									<li><span class="icon fa-clock-o"><span class="label">Feature 1</span></span></li>
-									<li><span class="icon fa-volume-up"><span class="label">Feature 2</span></span></li>
-									<li><span class="icon fa-laptop"><span class="label">Feature 3</span></span></li>
-									<li><span class="icon fa-inbox"><span class="label">Feature 4</span></span></li>
-									<li><span class="icon fa-lock"><span class="label">Feature 5</span></span></li>
-									<li><span class="icon fa-cog"><span class="label">Feature 6</span></span></li>
-								</ul>
+							<div class="6u">
+								<img src="images/calhandleszoomedin-01.png" class="image feature">
+		
 							
 							</div>				
 						</div>
 					</section>
-					
+				</div>
+					</article>
 				<!-- Two -->
 					<section class="wrapper style1 container special">
 						<div class="row">
 							<div class="4u">
 							
 								<section>
-									<span class="icon feature fa-check"></span>
+									<div class="iconcolumn"><img src="images/saltnpepa.png"></div>
 									<header>
-										<h3>This is Something</h3>
+										<h3>Seasoned Traveler?</h3>
 									</header>
-									<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+									<p class="description">You betcha.</br>With over 13 countries explored, I am always looking for new friends and adventures.  </p>
 								</section>
 							
 							</div>
 							<div class="4u">
 							
 								<section>
-									<span class="icon feature fa-check"></span>
+									<div class="iconcolumn"><img src="images/food.png"></div>
 									<header>
-										<h3>Also Something</h3>
+										<h3>Food Enthusiast?</h3>
 									</header>
-									<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+									<p class="description">No doubt.</br> You can always catch me baking cookies or trying new restaurants around town.  Check out my review on <a href="http://www.yelp.com/weekly_yelp/JAgncOuQnMsLx2Srl8s-QQ">Yelp Weekly</a>!</p>
 								</section>
 							
 							</div>
 							<div class="4u">
 							
 								<section>
-									<span class="icon feature fa-check"></span>
+									<div class="iconcolumn"><img src="images/car.png"></div>
 									<header>
-										<h3>Probably Something</h3>
+										<h3>Lyrical Genius?</h3>
 									</header>
-									<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+									<p class="description">Perhaps.</br>I have an impeccable memory that comes in handy at work and while jamming to tunes in the car.  </p>
 								</section>
 							
 							</div>
@@ -277,34 +261,18 @@
 
 		<!-- CTA -->
 			<section id="cta">
-			
 				<header>
-					<h2>Ready to do <strong>something</strong>?</h2>
-					<p>Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.</p>
+					<h2>Thanks for stopping by.  </h2>
+					<p>Feel free to shoot me an email. </br>I am always looking for cool projects that will help simplify the world around us.</p>
 				</header>
 				<footer>
 					<ul class="buttons">
-						<li><a href="#" class="button special">Take My Money</a></li>
-						<li><a href="#" class="button">LOL Wut</a></li>
+						<li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=laurentang92@gmail.com&su=&body="_blank"" class="button special">Contact Me</a></li>
 					</ul>
 				</footer>
-			
 			</section>
 
-		<!-- Footer -->
-			<footer id="footer">
-			
-				<ul class="icons">
-					<li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
-					<li><a href="#" class="icon circle fa-github"><span class="label">Github</span></a></li>
-					<li><a href="#" class="icon circle fa-dribbble"><span class="label">Dribbble</span></a></li>
-				</ul>
-				
-				<span class="copyright">&copy; Untitled. All rights reserved. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
-			
-			</footer>
+
 
 	</body>
 </html>
