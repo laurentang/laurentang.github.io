@@ -611,7 +611,7 @@
 		position: fixed;
 		top: 0;
 		width: 100%;
-		z-index: 10000;
+		z-index: 8000;
 	}
 
 
@@ -1173,4 +1173,12 @@
 
 .description{
 	margin-bottom: 25%;
+}
+
+#imagecenter{
+	height: 300px;
+	width: 300px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
 }
