@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 <!--
 	Twenty 1.0 by HTML5 UP
-	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
@@ -27,20 +26,19 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 		<!-- jQuery library (served from Google) -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-		<!-- bxSlider Javascript file -->
-		<script src="js/jquery.bxslider.min.js"></script>
-		<!-- bxSlider CSS file -->
-		<link href="css/jquery.bxslider.css" rel="stylesheet" />
-
-		
+		<!-- fancybox Javascript file -->
+        <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
+		<!-- fancybox CSS file -->
+		<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
 
 		<script type="text/javascript">
-    		$(document).ready(function () {
-        		$('.bxslider').bxSlider();
-    		});    	
-		</script>
-
-
+        $(document).ready(function() {
+            $('.fancybox').fancybox({
+                padding : 0,
+                openEffect  : 'elastic'
+                });
+			});
+    	</script>
    		
 	</head>
 	<body class="index loading">
@@ -101,22 +99,66 @@
 						
 						<div class="row">
 							<div class="6u">
+								<section class="project">
+									<a class="fancybox" href="images/signup.png" rel="gallery2">
+										<div class="image feature">
+											<img src="images/signup.png" alt=""/>
+										</div>
+									</a>
+									<div class="hidden">
+										<a class="fancybox" href="images/survey.png" rel="gallery2"><img src="images/survey.png" alt=""/>
+										</a>
+
+										<a class="fancybox" href="images/recipebrowser.png" rel="gallery2"><img src="images/recipebrowser.png" alt=""/>
+										</a>
+
+										<a class="fancybox" href="images/recipebrowserside.png" rel="gallery2"><img src="images/recipebrowserside.png" alt=""/>
+										</a>
+
+										<a class="fancybox" href="images/nutritionbreakdown.png" rel="gallery2"><img src="images/nutritionbreakdown.png" alt=""/>
+										</a>
+
+										<a class="fancybox" href="images/freshness.png" rel="gallery2"><img src="images/freshnesslogosds-01.png" alt=""/>
+										</a>
+
+									</div>
+
+
+									<header>
+										<h3>Freshness</h3>
+									</header>
+									<p>Designed 5 webpages after finalizing efficient user flow.  Gained exposure to A/B testing, quick mockups, and web development.  It has been amazing working for Freshness, which combines my passion for convenience and beautiful pictures of food.  </p>
+								</section>								
+
+
 							
 								<section class="project">
-									<ul class="bxslider">
-											<li class="image feature"><img src="images/kollab5finalists.png"/></li>
-											<li class="image feature"><img src="images/auditionbanner.png"/></li>
-											<li class="image feature"><img src="images/Openmic.png"/></li>
-									</ul></a>
+									<a class="fancybox" rel="gallery1" href="images/K5postercropped.png">
+										<div class="image feature"><img src="images/k5postercropped.png" alt=""/>
+										</div>
+									</a>
+									<div class="hidden">
+										<a class="fancybox" href="images/comingsoonbanner.png" rel="gallery1"><img src="images/comingsoonbanner.png" alt=""/>
+										</a>
+
+										<a class="fancybox" href="images/kollab5finalists.png" rel="gallery1"><img src="images/kollab5finalists.png" alt=""/>
+										</a>
+
+										<a class="fancybox" rel="gallery1" href="images/auditionbanner.png"><img src="images/auditionbanner.png" alt=""/>
+										</a>
+
+										<a class="fancybox" rel="gallery1"href="images/openmic.png"><img src="images/openmic.png" alt=""/>
+										</a>
+									</div>
 					
 									<header>
 										<h3 class="subheader">Kollaboration</h3>
 									</header>
-									<p>Designed a few facebook banners promoting multiple Kollaboration events.  With any assignment, I enjoy the opportunity to dabble with typography, spacing, and colors.  As a former pre-med student turned designer, I love working for an organization that believes in providing a stage for API performers in the arts.  </p>
+									<p>Designed marketing collateral promoting multiple Kollaboration events.  With any assignment, I enjoy the opportunity to dabble with typography, spacing, and colors.  As a former pre-med student turned designer, I love working for a non-profit organization that believes in providing a stage for API performers in the arts.  </p>
 								</section>
 
 								<section class="project">
-								<div class="image feature"><img src="images/FSMposter.png" /></div>
+									<a href="images/FSMposter.png" class="fancybox" class="image feature"><div class="image feature"><img src="images/FSMposter.png" /></div></a>
 									<header>
 										<h3>50th Anniversary Poster</h3>
 									</header>
@@ -124,7 +166,7 @@
 								</section>
 
 								<section class="project">
-								<div class="image feature"><img src="images/iconscolored.png" alt=""/></div>
+									<a href="images/iconscolored.png" class="fancybox"><div class="image feature"><img src="images/iconscolored.png" alt=""/></div></a>
 									<header>
 										<h3>Personal Projects</h3>
 									</header>
@@ -134,18 +176,37 @@
 
 							</div>
 							<div class="6u">
-							
+
 								<section class="project">
-									<ul class="bxslider">
-										<li class="image feature"><img src="images/RecipeBrowser.png"/></li>
-										<li class="image feature"><img src="images/RecipeBrowserside.png"/></li>
-										<li class="image feature"><img src ="images/freshnesslogosds-01.png"/></li>
-										<li class="image feature"><img src="images/nutritionbreakdown.png"/></li>
-									</ul>
+									<a class="fancybox" href="images/gocontact.png" rel="gallery"><div class="image feature"><img src="images/gocontacts.png" alt=""/>
+									</div>
+									</a>
+
 									<header>
-										<h3>Freshness</h3>
+										<h3 class="subheader">Go Overseas</h3>
 									</header>
-									<p>Designed 5 webpages after finalizing efficient user flow.  Gained exposure to A/B testing, quick mockups, and web development.  It has been amazing working for Freshness, which combines my passion for convenience and beautiful pictures of food.  </p>
+									<p>Collaborating on a website redesign in order to appeal to our 18-25 y.o. demographic.  I have the opportunity to reimagine many aspects of the site that would refocus on what is important for the user.        
+									</p>
+
+								</section>							
+
+
+								<section class="project">
+									<a class="fancybox" href="images/totspot.png" rel="gallery3">
+										<div class="image feature"><img src="images/totspot.png" alt=""/>
+										</div>
+									</a>
+
+									<div class="hidden">
+										<a class="fancybox" href="images/back2school.png" rel="gallery3"><img src="images/back2school.png" alt=""/>
+										</a>
+									</div>
+									</a>
+
+									<header>
+										<h3>Totspot</h3>
+									</header>
+									<p>Delivered banners, posters, and infographics for the iOS app that offers a marketplace for moms to sell baby clothing.
 								</section>
 								
 								<section id= "box" class= "project">
@@ -157,14 +218,21 @@
 								</section>	
 
 								<section class="project">
-									<ul class="bxslider">
-										<li class="image feature"><img src="images/brochure1.jpg"</li>
-										<li class="image feature"><img src="images/brochure2.jpg"></li>
-									</ul>
+									<a class="fancybox" href="images/brochure1.jpg" rel="gallery4">
+										<div class="image feature">
+											<img src="images/brochure1.jpg" alt=""/>
+										</div>
+									</a>
+
+									<div class="hidden">
+										<a class="fancybox" href="images/brochure2.jpg" rel="gallery4">
+											<img src="images/brochure2.jpg" alt=""/>
+										</a>
+									</div>
 									<header>
 										<h3>Fight The Flu Brochure</h3>
 									</header>
-									<p>Completed for child influenza awareness</p>
+									<p>Completed for child influenza awareness.  Created using Adobe Indesign.</p>
 								</section>								
 							</div>
 
@@ -186,7 +254,7 @@
 					<div class="icon fa-bar-chart-o"><img src="images/snowman.png"></div>
 					<h2>Do you want to build a snowman?</br>Well, I want to build your <strong>product</strong>.<br/>
 					</h2>
-					<p id="intro">Hi, my name is Lauren, and I am a designer based in the San Francisco Bay Area.  I am dedicated to designing stunning user interfaces that translate into engaging user experiences.  Call me old-fashioned, but I enjoy creating wondrous things with a pen and paper.  Now if you give me a computer (not literally, of course), I can also show you what I can do for web and mobile applications.  </p>
+					<p>Hi, my name is Lauren, and I am a designer based in the San Francisco Bay Area.  I am dedicated to designing stunning user interfaces that translate into engaging user experiences.  Call me old-fashioned, but I enjoy creating wondrous things with a pen and paper.  Now if you give me a computer (not literally, of course), I can also show you what I can do for web and mobile applications.  </p>
 				</header>
 
 					<section class="wrapper style2 container special-alt">
@@ -228,7 +296,7 @@
 									<header>
 										<h3>Food Enthusiast?</h3>
 									</header>
-									<p class="description">No doubt.</br> You can always catch me baking cookies or trying new restaurants around town.  Check out my review on <a href="http://www.yelp.com/weekly_yelp/JAgncOuQnMsLx2Srl8s-QQ">Yelp Weekly</a>!</p>
+									<p class="description">No doubt.</br> You can always catch me baking cookies or trying new restaurants.  Check out my review on <a href="http://www.yelp.com/weekly_yelp/JAgncOuQnMsLx2Srl8s-QQ">Weekly Yelp</a>!</p>
 								</section>
 							
 							</div>
@@ -255,7 +323,7 @@
 			<section id="cta">
 				<header>
 					<h2>Thanks for stopping by.  </h2>
-					<p>Feel free to shoot me an email. </br>I am always looking for cool projects that will help simplify the world around us.</p>
+					<p>Feel free to shoot me an email. </br>I am always looking for cool projects that strive to simplify the world around us.</p>
 				</header>
 				<footer>
 					<ul class="buttons">
